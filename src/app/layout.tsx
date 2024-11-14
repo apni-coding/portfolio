@@ -1,8 +1,20 @@
 import type { Metadata } from "next";;
 import "./globals.css";
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import '@fortawesome/fontawesome-free/css/all.min.css'; 
 import ReduxProvider from "@/redux/StoreProivder";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import "./css/bootstrap.min.css";
+// import "./css/font-awesome.min.css";
+// import "./css/swiper-bundle.min.css";
+import "./css/animate.min.css";
+import "./css/validnavs.css";
+import "./css/helper.css";
+import "./css/unit-test.css";
+import "./css/style.css";
+
+
 
 export const metadata: Metadata = {
   title: "Vivek Kumar | Portfoilio",
@@ -21,7 +33,7 @@ export default function RootLayout({
           <ReduxProvider>
             <Header />
             {children}
-            <Footer />
+            {/* <Footer /> */}
           </ReduxProvider>
         </main>
       </body>

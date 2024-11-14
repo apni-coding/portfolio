@@ -1,9 +1,9 @@
 import React from 'react'
-
+import ContactUsContainer from './ContactUsContainer'
 export default function page() {
   return (
-    <div>
-      <h1>Contact us</h1>
-    </div>
+    <>
+     <ContactUsContainer/>
+    </>
   )
 }
