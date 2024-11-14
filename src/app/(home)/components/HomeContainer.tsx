@@ -4,6 +4,15 @@ import { AppDispatch, RootState } from "@/redux/store";
 
 import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
+import Banner from "./Banner";
+import About from "./About";
+import Services from "./Services";
+import Experience from "./Experience";
+import Expertise from "./Expertise";
+import ContactUsContainer from "@/app/contact/ContactUsContainer";
+import Footer from "@/components/footer/Footer";
+import Promo from "./Promo";
+import TimeLine from "./TimeLine";
 
 export default function HomeContainer() {
   const [isMount, setIsMount] = useState(false);
@@ -21,5 +30,15 @@ export default function HomeContainer() {
     dispatch(requestOtp(payload));
   }, []);
   if (!isMount) null;
-  return <>{isLoading && <h1>Loading...</h1>}</>;
+  return <>
+  <Banner />
+  <About/>
+  <Services/>
+  <Experience/>
+  <Expertise/>
+  <TimeLine/>
+  <ContactUsContainer/>
+  <Promo/>
+  <Footer/>
+  </>;
 }
