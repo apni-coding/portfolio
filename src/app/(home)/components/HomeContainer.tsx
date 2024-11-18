@@ -14,6 +14,8 @@ import Footer from "@/components/footer/Footer";
 import Promo from "./Promo";
 import TimeLine from "./TimeLine";
 
+import ScrollToTop from "react-scroll-to-top";
+
 export default function HomeContainer() {
   const [isMount, setIsMount] = useState(false);
   const dispatch: AppDispatch = useDispatch();
@@ -30,15 +32,18 @@ export default function HomeContainer() {
     dispatch(requestOtp(payload));
   }, []);
   if (!isMount) null;
-  return <>
-  <Banner />
-  <About/>
-  <Services/>
-  <Experience/>
-  <Expertise/>
-  <TimeLine/>
-  <ContactUsContainer/>
-  <Promo/>
-  <Footer/>
-  </>;
+  return (
+    <>
+      <Banner />
+      <About />
+      <Services />
+      <Experience />
+      <Expertise />
+      <TimeLine />
+      <ContactUsContainer />
+      <Promo />
+      <Footer />
+      <ScrollToTop smooth />
+    </>
+  );
 }

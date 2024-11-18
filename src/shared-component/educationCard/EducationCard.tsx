@@ -1,23 +1,30 @@
 import React from "react";
+interface PropsInterface {
+  data: {
+    id: number;
+    title: string;
+    subTitle: string;
+    time: string;
+    description:string
+  };
+}
 
-export default function EducationCard() {
+export default function EducationCard({ data }: PropsInterface) {
   return (
     <>
-      <div className="timeline-style-one-item wow fadeInUp">
+      <div className="timeline-style-one-item wow ">
         <div className="timeline-header">
           <div className="left">
-            <h4>Associate Software Developer</h4>
-            <p>iProgrammer Solutions Pvt. Ltd., Pune</p>
+            <h4>{data?.title}</h4>
+            <p>{data?.subTitle}</p>
           </div>
           <div className="right">
-            <span>Aug-2023 - Now</span>
+            <span>{data?.time}</span>
           </div>
         </div>
         <div className="timeline-body">
           <p>
-            Developed full-stack applications using the MERN stack with a focus
-            on React.js and Next.js for frontend development, and Node.js with
-            TypeScript for backend services.
+           {data?.description}
           </p>
         </div>
       </div>

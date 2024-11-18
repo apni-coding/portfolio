@@ -9,8 +9,14 @@ import useTextRotation from "@/hooks/useTextRotation";
 import useTypewriter from "@/hooks/useTypeWriter";
 export default function Banner() {
   const typewriterText = useTypewriter(
-    ["Full Stack Developer", "Professional Coder", "YouTube Creator"],
-    50, // Typing speed (in milliseconds)
+     [
+      "Full Stack Dev",
+      "Web Developer",
+      "YouTuber",
+      "Content Creator"
+    ],
+    
+    60, // Typing speed (in milliseconds)
     2000 // Pause duration (in milliseconds)
   );
   return (
@@ -38,9 +44,11 @@ export default function Banner() {
                     <div className="circle-text-card">
                       <div className="circle-text style-two">
                         {/* <!-- curved-circle start--> */}
+                        
                         <div
                           className="circle-text-item"
                           data-circle-text-options='{"radius": 75, "forceWidth": true, "forceHeight": true }'
+                          
                         >
                           . See My Portfolio . My Expertise
                         </div>
@@ -53,7 +61,7 @@ export default function Banner() {
                       Hi, I'm Vivek Kumar, a MERN Stack Developer with over 2+
                       years of experience. I've successfully completed multiple
                       projects, including the OKU Health application, a Coolant
-                      Management System, and askUtec—a social media platform.
+                      Management System, and askUtec a social media platform.
                       Additionally, I worked on Utec by UltraTech, a high-impact
                       project with millions of users. My background in scalable
                       web development allows me to tackle complex challenges
@@ -98,7 +106,7 @@ export default function Banner() {
                   <Image
                     src={myPhoto}
                     width={1000}
-                    height={500}
+                    height={650}
                     alt="Image Not Found"
                   />
                   <Image
