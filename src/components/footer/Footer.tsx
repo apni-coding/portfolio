@@ -1,8 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
   const url = "url(/app/img/shape/1.jpg)";
+  const d = new Date();
+  let year = d.getFullYear();
   return (
     <>
       <footer
@@ -23,29 +26,29 @@ export default function Footer() {
                 </a>
                 <ul className="foter-menu">
                   <li>
-                    <a href="index.html">Home</a>
+                    <Link href="/">Home</Link>
                   </li>
                   <li>
-                    <a href="service.html">Services</a>
+                    <Link href="#services">Services</Link>
                   </li>
                   <li>
-                    <a href="projects.html">Portfolio</a>
+                    <Link href="#portfolio">Portfolio</Link>
                   </li>
                   <li>
-                    <a href="https://www.apnicoding.in/blog" target="_blank">
+                    <Link href="https://www.apnicoding.in/blog" target="_blank">
                       Blog
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="https://www.apnicoding.in" target="_blank">
+                    <Link href="https://www.apnicoding.in" target="_blank">
                       Website
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="contact.html">Contact</a>
+                    <Link href="#contact">Contact</Link>
                   </li>
                 </ul>
-                <p>Copyright &copy; 2024 Apni Coding. All Rights Reserved</p>
+                <p>Copyright &copy; {year} Apni Coding. All Rights Reserved</p>
               </div>
             </div>
           </div>

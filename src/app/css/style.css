@@ -4071,6 +4071,7 @@ ul.list-style-one li::after {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	max-width: 170px;
 }
 
 .funfact-style-two-item:nth-child(2n) {
@@ -4149,7 +4150,7 @@ ul.list-style-one li::after {
 }
 
 .timeline-header {
-	padding: 30px;
+	padding: 20px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;

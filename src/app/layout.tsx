@@ -1,7 +1,7 @@
-import type { Metadata } from "next";;
+import type { Metadata } from "next";
 import "./globals.css";
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import '@fortawesome/fontawesome-free/css/all.min.css'; 
+import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import ReduxProvider from "@/redux/StoreProivder";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
@@ -13,8 +13,7 @@ import "./css/validnavs.css";
 import "./css/helper.css";
 import "./css/unit-test.css";
 import "./css/style.css";
-
-
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "Vivek Kumar | Portfoilio",
@@ -31,7 +30,9 @@ export default function RootLayout({
       <body>
         <main>
           <ReduxProvider>
+            <Toaster />
             <Header />
+
             {children}
             {/* <Footer /> */}
           </ReduxProvider>
