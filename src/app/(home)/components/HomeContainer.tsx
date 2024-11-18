@@ -15,6 +15,9 @@ import Promo from "./Promo";
 import TimeLine from "./TimeLine";
 
 import ScrollToTop from "react-scroll-to-top";
+import LazyLoadComponent from "@/shared-component/lazyLoadig/LazyLoadingComponent";
+import MainLoader from "@/shared-component/loader/MainLoader";
+import Head from "next/head";
 
 export default function HomeContainer() {
   const [isMount, setIsMount] = useState(false);
@@ -22,6 +25,7 @@ export default function HomeContainer() {
   const { isUserAuthenticate, isLoading } = useSelector(
     (state: RootState) => state.auth
   );
+  
 
   useEffect(() => {
     setIsMount(true);
@@ -34,7 +38,11 @@ export default function HomeContainer() {
   if (!isMount) null;
   return (
     <>
-      <Banner />
+      <Head>
+        <meta name="description" content="Vivek Kumar About Us" />
+        <meta name="keywords" content="vivek kumar, vivek kumar portfolio, vivek kumar website, vivek kumar apni coding, apni coding vivek kumar, Web Development" />
+      </Head>
+      <LazyLoadComponent component={Banner} />
       <About />
       <Services />
       <Experience />

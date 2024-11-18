@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import logo from "../../app/img/logo.png";
 
 export default function Footer() {
   const url = "url(/app/img/shape/1.jpg)";
@@ -16,14 +17,14 @@ export default function Footer() {
           <div className="row">
             <div className="col-lg-8 offset-lg-2">
               <div className="footer-items text-center">
-                <a href="#" className="footer-logot">
+                <Link href="/" className="footer-logot">
                   <Image
-                    src="/app/img/logo.png"
-                    width={500}
+                    src={logo}
+                    width={200}
                     height={500}
                     alt="Image Not Found"
                   />
-                </a>
+                </Link>
                 <ul className="foter-menu">
                   <li>
                     <Link href="/">Home</Link>

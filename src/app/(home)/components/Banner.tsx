@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import useTextRotation from "@/hooks/useTextRotation";
 import useTypewriter from "@/hooks/useTypeWriter";
+import Head from "next/head";
 export default function Banner() {
   const typewriterText = useTypewriter(
      [
@@ -21,6 +22,12 @@ export default function Banner() {
   );
   return (
     <>
+    
+      <Head>
+        <title>Vivek About Us</title>
+        <meta name="description" content="Vivek Kumar About Us" />
+        <meta name="keywords" content="vivek kumar, vivek kumar portfolio, vivek kumar website, vivek kumar apni coding, apni coding vivek kumar, Web Development" />
+      </Head>
       <div className="banner-style-one-area bg-gray">
         <div className="container">
           <div className="row align-items-center">
@@ -50,7 +57,7 @@ export default function Banner() {
                           data-circle-text-options='{"radius": 75, "forceWidth": true, "forceHeight": true }'
                           
                         >
-                          . See My Portfolio . My Expertise
+                          {/* . See My Portfolio . My Expertise */}
                         </div>
                       </div>
                       <Link href="/">

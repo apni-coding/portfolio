@@ -4,6 +4,7 @@ import webIcon from "@/app/img/icon/7.png";
 import appIcon from "@/app/img/icon/5.png";
 import careIcon from "@/app/img/icon/4.png";
 import uiUxIcon from "@/app/img/icon/6.png";
+import Head from "next/head";
 
 
 export default function Services() {
@@ -27,7 +28,7 @@ export default function Services() {
       description:"Providing reliable updates, troubleshooting and enhancements to keep your application secure and running smoothly. "
     },
     {
-      id:3,
+      id:4,
       title:"UI/UX Design",
       logo:uiUxIcon,
       description:"Designing intuitive, visually appealing interfaces that prioritize user engagement and functionality for optimal experiences. "
@@ -35,6 +36,11 @@ export default function Services() {
   ]
   return (
     <>
+    <Head>
+        <title>Vivek | Services</title>
+        <meta name="description" content="Vivek Kumar Services" />
+        <meta name="keywords" content="vivek kumar, vivek kumar portfolio, vivek kumar website, vivek kumar apni coding, apni coding vivek kumar, Web Development" />
+      </Head>
       <div
         id="services"
         className="services-style-one-area default-padding bottom-less"
@@ -52,8 +58,8 @@ export default function Services() {
         <div className="container">
           <div className="row">
             {
-              servicesList?.map((item)=>(
-                <ServiceCard data={item} key={item?.id}/>
+              servicesList?.map((item, index)=>(
+                <ServiceCard data={item} key={item?.id || index}/>
               ))
             }
            

@@ -5,6 +5,7 @@ import Image from "next/image";
 import project1 from "@/app/img/projects/1.jpg";
 import healthapp from "@/app/img/projects/health.jpg";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Experience() {
   const portFolioList = [
@@ -29,6 +30,11 @@ export default function Experience() {
   ];
   return (
     <>
+     <Head>
+        <title>Vivek | Experience</title>
+        <meta name="description" content="Vivek Kumar Experience" />
+        <meta name="keywords" content="vivek kumar, vivek kumar portfolio, vivek kumar website, vivek kumar apni coding, apni coding vivek kumar, Web Development" />
+      </Head>
       <div
         id="portfolio"
         className="portfolio-style-one-area default-padding bg-gray"
@@ -52,8 +58,8 @@ export default function Experience() {
             <div className="col-md-12 gallery-content">
               <div className="magnific-mix-gallery gallery-masonary">
                 <div id="gallery-masonary" className="gallery-items colums-3">
-                  {portFolioList?.map((item) => (
-                    <WorkCard data={item} key={item?.id} />
+                  {portFolioList?.map((item, index) => (
+                    <WorkCard data={item} key={item?.id || index} />
                   ))}
                 </div>
                 <div className="row">

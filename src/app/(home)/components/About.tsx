@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import start_shape from "@/app/img/shape/8.png";
 import start_shape_dark from "@/app/img/shape/3.png";
-import my_photo from "@/app/img/about/2.jpg";
+import my_photo from "@/app/img/about/2.png";
 import team_one from "@/app/img/team/node-js.png";
 import team_two from "@/app/img/team/mongodb.png";
 import team_three from "@/app/img/team/mysql.png";
@@ -10,10 +10,16 @@ import team_four from "@/app/img/team/react.png";
 import video_play from "@/app/img/about/1.jpg";
 
 import Link from "next/link";
+import Head from "next/head";
 
 export default function About() {
   return (
     <>
+    <Head>
+        <title>Vivek About Us</title>
+        <meta name="description" content="Vivek Kumar About Us" />
+        <meta name="keywords" content="vivek kumar, vivek kumar portfolio, vivek kumar website, vivek kumar apni coding, apni coding vivek kumar, Web Development" />
+      </Head>
       <div id="about" className="about-style-one-area bg-gray default-padding">
         <div className="shape-style-one">
           <Image

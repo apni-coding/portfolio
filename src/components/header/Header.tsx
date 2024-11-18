@@ -1,8 +1,8 @@
-'use client'
-import Link from 'next/link';
-import { useState } from 'react';
-import Image from 'next/image'
-import logo from '../../app/img/logo.png'
+"use client";
+import Link from "next/link";
+import { useState } from "react";
+import Image from "next/image";
+import logo from "../../app/img/logo.png";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for menu toggle
 
@@ -20,7 +20,11 @@ export default function Header() {
                 <span className="input-group-addon">
                   <i className="fa fa-search"></i>
                 </span>
-                <input type="text" className="form-control" placeholder="Search" />
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Search"
+                />
                 <span className="input-group-addon close-search">
                   <i className="fa fa-times"></i>
                 </span>
@@ -38,42 +42,56 @@ export default function Header() {
                 <i className="fa fa-bars"></i>
               </button>
               <Link className="navbar-brand" href="/">
-                
-                <Image
+                {!isMenuOpen && (
+                  <Image
                     src={logo}
                     width={150}
                     height={30}
                     className="logo"
                     alt="Image Not Found"
                   />
+                )}
               </Link>
             </div>
 
             {/* Conditionally render the collapse menu based on state */}
-            <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbar-menu">
+            <div
+              className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
+              id="navbar-menu"
+            >
               <button
                 type="button"
                 className="navbar-toggle"
                 onClick={toggleMenu} // Toggle menu on close
               >
-                <i className="fa fa-times"></i>
+                <i className="fa-solid fa-circle-xmark"></i>
               </button>
 
               <ul className="nav navbar-nav navbar-right">
                 <li className="dropdown">
-                  <Link href="/" className="smooth-menu">Home</Link>
+                  <Link href="/" className="smooth-menu">
+                    Home
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#services" className="smooth-menu">Services</Link>
+                  <Link href="#services" className="smooth-menu">
+                    Services
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#portfolio" className="smooth-menu">Portfolio</Link>
+                  <Link href="#portfolio" className="smooth-menu">
+                    Portfolio
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#resume" className="smooth-menu">Resume</Link>
+                  <Link href="#resume" className="smooth-menu">
+                    Resume
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#contact" className="smooth-menu">Contact</Link>
+                  <Link href="#contact" className="smooth-menu">
+                    Contact
+                  </Link>
                 </li>
               </ul>
             </div>

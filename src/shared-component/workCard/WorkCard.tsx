@@ -27,8 +27,8 @@ export default function WorkCard({ data }: PropsInterface) {
               <div className="content">
                 <ul className="pf-tags">
                   {data?.tag?.map((item, index) => (
-                    <li>
-                      <Link href="#" key={item || index}>
+                    <li key={ index}>
+                      <Link href="#" >
                         {item}
                       </Link>
                     </li>

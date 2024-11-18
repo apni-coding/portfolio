@@ -511,7 +511,7 @@ nav.navbar.validnavs .navbar-toggle::after {
 }
 
 nav.navbar.validnavs .navbar-toggle i {
-	font-weight: 300;
+	
 	color: var(--color-heading);
 }
 
@@ -3252,9 +3252,8 @@ ul.simple-menu-list > li i {
 }
 
 nav.validnavs.navbar-full .navbar-toggle i {
-	font-size: 18px;
+	
 	color: #9a9a9a;
-	font-weight: bold;
 	transition: 0.3s ease;
 }
 
