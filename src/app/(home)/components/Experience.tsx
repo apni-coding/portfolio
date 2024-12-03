@@ -1,9 +1,6 @@
 import WorkCard from "@/shared-component/workCard/WorkCard";
 import React from "react";
-import icon from "@/app/img/shape/9.png";
 import Image from "next/image";
-import project1 from "@/app/img/projects/1.jpg";
-import healthapp from "@/app/img/projects/health.jpg";
 import Link from "next/link";
 import Head from "next/head";
 
@@ -11,19 +8,19 @@ export default function Experience() {
   const portFolioList = [
     {
       id: 1,
-      thumbnail: [project1],
+      thumbnail: ["/img/projects/1.jpg"],
       tag: ["Web", "Coding"],
       title: "askUtec by UltraTech ~ Social Media & Booking Platform",
     },
     {
       id: 2,
-      thumbnail: [project1],
+      thumbnail: ["/img/projects/1.jpg"],
       tag: ["Web", "Coding"],
       title: "Coolant Management System",
     },
     {
       id: 3,
-      thumbnail: [healthapp],
+      thumbnail: ["/img/projects/health.jpg"],
       tag: ["Mobile", "Coding"],
       title: "OKU ~ Personalized Healthcare Application",
     },
@@ -41,7 +38,7 @@ export default function Experience() {
         style={{ marginTop: "-140px" }}
       >
         <div className="shape-top-left">
-          <Image src={icon} width={0} height={0} alt="Image Not Found" />
+          <Image src={"/img/shape/9.png"} width={0} height={0} alt="Image Not Found" />
         </div>
         <div className="container">
           <div className="row">

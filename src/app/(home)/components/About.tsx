@@ -1,13 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import start_shape from "@/app/img/shape/8.png";
-import start_shape_dark from "@/app/img/shape/3.png";
-import my_photo from "@/app/img/about/2.png";
-import team_one from "@/app/img/team/node-js.png";
-import team_two from "@/app/img/team/mongodb.png";
-import team_three from "@/app/img/team/mysql.png";
-import team_four from "@/app/img/team/react.png";
-import video_play from "@/app/img/about/1.jpg";
 
 import Link from "next/link";
 import Head from "next/head";
@@ -15,23 +7,26 @@ import Head from "next/head";
 export default function About() {
   return (
     <>
-    <Head>
+      <Head>
         <title>Vivek About Us</title>
         <meta name="description" content="Vivek Kumar About Us" />
-        <meta name="keywords" content="vivek kumar, vivek kumar portfolio, vivek kumar website, vivek kumar apni coding, apni coding vivek kumar, Web Development" />
+        <meta
+          name="keywords"
+          content="vivek kumar, vivek kumar portfolio, vivek kumar website, vivek kumar apni coding, apni coding vivek kumar, Web Development"
+        />
       </Head>
       <div id="about" className="about-style-one-area bg-gray default-padding">
         <div className="shape-style-one">
           <Image
-            src={start_shape_dark}
-            width={0}
-            height={0}
+            src={"/img/shape/3.png"}
+            width={200}
+            height={200}
             alt="Image Not Found"
           />
           <Image
-            src={start_shape}
-            width={0}
-            height={0}
+            src={"/img/shape/8.png"}
+            width={100}
+            height={400}
             className="upDownScrol"
             alt="Image Not Found"
           />
@@ -115,9 +110,9 @@ export default function About() {
               <div className="col-lg-8 pr-60 pr-md-15 pr-xs-15">
                 <div className="img-container">
                   <Image
-                    src={video_play}
-                    width={0}
-                    height={0}
+                    src={"/img/about/1.jpg"}
+                    width={1000}
+                    height={500}
                     alt="Image Not Found"
                   />
                   <Link
@@ -131,8 +126,8 @@ export default function About() {
               </div>
               <div className="col-lg-4">
                 <Image
-                  src={my_photo}
-                  width={0}
+                  src={"/img/about/2.png"}
+                  width={400}
                   height={400}
                   alt="Image Not Found"
                 />

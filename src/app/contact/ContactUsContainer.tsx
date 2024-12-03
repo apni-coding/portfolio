@@ -1,8 +1,7 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Image from "next/image";
-import userProfile from "@/app/img/illustration/5.png";
-import shape from "@/app/img/shape/13.png";
 import {
   contactUs,
   resetContactUs,
@@ -34,14 +33,14 @@ export default function ContactUsContainer() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     try {
-      const payload =  {
-        "name": formData?.name,
-        "email": formData?.email,
-        "phone": formData?.phone,
-        "address": "Portfolio Contact",
-        "comment": formData?.comments
-    }
-     await dispatch(contactUs(payload))
+      const payload = {
+        name: formData?.name,
+        email: formData?.email,
+        phone: formData?.phone,
+        address: "Portfolio Contact",
+        comment: formData?.comments,
+      };
+      await dispatch(contactUs(payload))
         .unwrap()
         .then(() => {
           resetState();
@@ -69,7 +68,7 @@ export default function ContactUsContainer() {
     <div
       id="contact"
       className="contact-style-one-area default-padding bg-gray"
-      style={{marginTop:'-120px'}}
+      style={{ marginTop: "-120px" }}
     >
       <div className="container">
         <div className="contact-style-one-items">
@@ -148,12 +147,17 @@ export default function ContactUsContainer() {
             </div>
             <div className="contact-illustration">
               <Image
-                src={userProfile}
-                width={0}
-                height={637}
+                src={"/img/illustration/5.png"}
+                width={500} /* Set the desired width */
+                height={637} /* Set the desired height */
                 alt="User Profile"
               />
-              <Image src={shape} width={0} height={0} alt="Shape" />
+              <Image
+                src={"/img/shape/13.png"}
+                width={200} /* Example width */
+                height={200} /* Example height */
+                alt="Shape"
+              />
             </div>
           </div>
         </div>

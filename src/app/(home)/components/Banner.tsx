@@ -1,7 +1,4 @@
 import React from "react";
-import myPhoto from "@/app/img/illustration/1.png";
-import shapeOne from "@/app/img/shape/1.png";
-import shapeThree from "@/app/img/shape/3.png";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -60,7 +57,7 @@ export default function Banner() {
                           {/* . See My Portfolio . My Expertise */}
                         </div>
                       </div>
-                      <Link href="/">
+                      <Link href="https://drive.google.com/file/d/1sZSJAHFVAqykCf0o4uJSi2aPkli4L-TM/view">
                         <i className="fa-solid fa-download"></i>
                       </Link>
                     </div>
@@ -111,19 +108,19 @@ export default function Banner() {
                 </div>
                 <div className="thumb">
                   <Image
-                    src={myPhoto}
+                    src={'/img/illustration/1.png'}
                     width={1000}
                     height={650}
                     alt="Image Not Found"
                   />
                   <Image
-                    src={shapeOne}
+                    src={'/img/shape/1.png'}
                     width={0}
                     height={0}
                     alt="Image Not Found"
                   />
                   <Image
-                    src={shapeThree}
+                    src={'/img/shape/3.png'}
                     width={90}
                     height={0}
                     alt="Image Not Found"

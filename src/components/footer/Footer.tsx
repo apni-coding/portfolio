@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import logo from "../../app/img/logo.png";
 
 export default function Footer() {
   const url = "url(/app/img/shape/1.jpg)";
@@ -19,7 +18,7 @@ export default function Footer() {
               <div className="footer-items text-center">
                 <Link href="/" className="footer-logot">
                   <Image
-                    src={logo}
+                    src={"/img/logo.png"}
                     width={200}
                     height={500}
                     alt="Image Not Found"

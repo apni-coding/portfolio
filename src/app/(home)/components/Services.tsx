@@ -1,9 +1,5 @@
 import ServiceCard from "@/shared-component/serviceCard/ServiceCard";
 import React from "react";
-import webIcon from "@/app/img/icon/7.png";
-import appIcon from "@/app/img/icon/5.png";
-import careIcon from "@/app/img/icon/4.png";
-import uiUxIcon from "@/app/img/icon/6.png";
 import Head from "next/head";
 
 
@@ -12,25 +8,25 @@ export default function Services() {
     {
       id:1,
       title:"Web Design",
-      logo:webIcon,
+      logo:"/img/icon/7.png",
       description:"Crafting modern, responsive websites that capture brand identity and ensure a seamless user experience across all devices."
     },
     {
       id:2,
       title:"App Development",
-      logo:appIcon,
+      logo:"/img/icon/5.png",
       description:"Developing high-performance, cross-platform apps tailored to your business needs, with a focus on scalability and user satisfaction."
     },
     {
       id:3,
       title:"Care & Support",
-      logo:careIcon,
+      logo:"/img/icon/4.png",
       description:"Providing reliable updates, troubleshooting and enhancements to keep your application secure and running smoothly. "
     },
     {
       id:4,
       title:"UI/UX Design",
-      logo:uiUxIcon,
+      logo:"/img/icon/6.png",
       description:"Designing intuitive, visually appealing interfaces that prioritize user engagement and functionality for optimal experiences. "
     }
   ]

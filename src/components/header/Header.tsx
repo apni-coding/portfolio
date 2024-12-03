@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
-import logo from "../../app/img/logo.png";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for menu toggle
 
@@ -44,7 +43,7 @@ export default function Header() {
               <Link className="navbar-brand" href="/">
                 {!isMenuOpen && (
                   <Image
-                    src={logo}
+                    src={"/img/logo.png"}
                     width={150}
                     height={30}
                     className="logo"
